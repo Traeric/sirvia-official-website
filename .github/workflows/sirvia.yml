@@ -13,7 +13,10 @@ jobs:
     steps:
     - name: Download code
       uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Build and Deploy
       uses: actions/setup-node@v1
-    - run: npm install
-    - run: npm run serve
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+        BUILD_SCRIPT: npm install && npm run build
