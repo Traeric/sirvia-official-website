@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Download code
       uses: actions/checkout@v1
-    - name: Build and Deploy
+    - name: Node deploy
       uses: actions/setup-node@v1
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
