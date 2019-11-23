@@ -17,6 +17,6 @@ jobs:
       uses: actions/setup-node@v1
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: dist
         BUILD_SCRIPT: npm install && npm run build
